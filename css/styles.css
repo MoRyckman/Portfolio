@@ -1,3 +1,269 @@
-﻿body
-{
+﻿/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    background: url('./images/PortfolioBannerV2.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Transparent box styling */
+.transparent-box {
+    background: rgb(235, 218, 218, 0.8); /* White background with 50% opacity */
+    padding: 50px; /* Adjust padding as needed */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+    max-width: 800px; /* Maximum width of the box */
+    margin: 0 auto; /* Center the box horizontally */
+    width: fit-content; /* Width based on content */
+}
+
+/* Wrapper for sections */
+section {
+    padding: 50px 10%;
+    background: transparent; /* Make sections transparent to allow the background to show through */
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 150px 0;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    margin-top: 500px;
+    color: white;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+/* Portfolio Section */
+#portfolio h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* Portfolio Category Section */
+.portfolio-category {
+    margin-bottom: 150px;
+}
+
+.portfolio-category h3 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.portfolio-category .portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, max-height 0.3s ease; /* Added max-height transition */
+    max-height: 400px; /* Set a default max-height */
+    position: relative; /* Ensure stacking context for animation */
+}
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: height 0.3s ease; /* Added transition for image height */
+    }
+
+    .project-card.expanded {
+        transform: none;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 600px;
+        max-height: none; /* Remove max-height constraint */
+        position: relative;
+        z-index: 2;
+    }
+
+        .project-card.expanded img {
+            height: auto; /* Adjust height when expanded */
+        }
+
+.project-info {
+    padding: 20px;
+    text-align: center;
+    transition: opacity 0.3s ease; /* Added transition for opacity */
+}
+
+.project-card.expanded .project-info {
+    display: block;
+    opacity: 1;
+    padding: 30px;
+    text-align: left;
+}
+
+/* About Section */
+#about h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.about-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+#read-more {
+    background-color: #ff7e5f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#read-more:hover {
+    background-color: #feb47b;
+}
+
+#expanded-about {
+    display: block;
+    margin-top: 30px;
+    text-align: left;
+}
+
+#expanded-about h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+#expanded-about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#expanded-about ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+#expanded-about a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff7e5f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#expanded-about a:hover {
+    background-color: #feb47b;
+}
+
+/* About Section - Hidden Content */
+.hidden {
+    display: none;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #ff7e5f;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #feb47b;
+}
+
+/* Footer Section */
+footer {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+    }
 }
