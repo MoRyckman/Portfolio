@@ -7,7 +7,7 @@
 
 html, body {
     font-family: 'Poppins', sans-serif;
-    background: url('../images/PortfolioBannerV2.png') no-repeat center center;
+    background: url('./images/PortfolioBannerV2.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
