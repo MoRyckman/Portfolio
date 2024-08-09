@@ -3,29 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Design Portfolio</title>
+    <title>Mo Ryckman - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Game Designer</p>
-        <nav>
-            <ul>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="header-content">
+            <h1>The Portfolio of Mo Ryckman</h1>
+            <p>Indie Developer</p>
+            <nav>
+                <ul>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section id="portfolio">
-        <!-- Portfolio thumbnails will go here -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="transparent-box">
+        <h2>My Portfolio</h2>
+
+        <!-- Games Collection -->
+        <div class="portfolio-category" id="games">
+            <h3>Games</h3>
+            <div class="portfolio-grid">
+                <!-- WIP Cave game -->
+                <div class="project-card">
+                    <img src="path/to/game1-thumbnail.jpg" alt="Game 1">
+                    <div class="project-info">
+                        <h3>Game Title 1</h3>
+                        <p>WIP Cave game</p>
+                    </div>
+                </div>
+                <!-- GunDate -->
+                <div class="project-card">
+                    <img src="path/to/game1-thumbnail.jpg" alt="Game 1">
+                    <div class="project-info">
+                        <h3>Game Title 1</h3>
+                        <p>On a date with a gun!?</p>
+                    </div>
+                </div>
+                <!-- BoatGame -->
+                <div class="project-card">
+                    <img src="path/to/game1-thumbnail.jpg" alt="Game 1">
+                    <div class="project-info">
+                        <h3>Game Title 1</h3>
+                        <p>BOAT GAME</p>
+                    </div>
+                </div>
+                <!-- VifeTheGame -->
+                <div class="project-card">
+                    <img src="path/to/game1-thumbnail.jpg" alt="Game 1">
+                    <div class="project-info">
+                        <h3>Game Title 1</h3>
+                        <p>Vife</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Art Collection -->
+        <div class="portfolio-category" id="art">
+            <h3>Art</h3>
+            <div class="portfolio-grid">
+                <!--skull-->
+                <div class="project-card">
+                    <img src="../../images/SkullScene.png" alt="Art 1">
+                    <div class="project-info">
+                        <h3>Orc Settlement</h3>
+                        <p>An Orc settlement build within the remains of an ancient creature. Modeled in Blender, textured in Adobe Substance Painter and rendered in Unity</p>
+                    </div>
+                </div>
+                <!--Kart-->
+                <div class="project-card">
+                    <img src="../../images/Kart.png" alt="Art 1">
+                    <div class="project-info">
+                        <h3>Nature kart</h3>
+                        <p>A kart made to a partry game aesthetic with a nature/bonzai tree theme. Modeled and renedered in Blender, textured in Adobe Substance Painter.</p>
+                    </div>
+                </div>
+                <!--Robot-->
+                <div class="project-card">
+                    <img src="../../images/Robuddy.png" alt="Art 1">
+                    <div class="project-info">
+                        <h3>Robot buddy</h3>
+                        <p>A fully rigged robot buddy :). Modeled and renedered in Blender, textured in Adobe Substance Painter.</p>
+                    </div>
+                </div>
+                <!--HatShop-->
+                <div class="project-card">
+                    <img src="../../images/HatShop.jpg" alt="Art 1">
+                    <div class="project-info">
+                        <h3>The traveling hat shop</h3>
+                        <p>A traveling hat shop made by some mad scientist! Modeled in Maya, textured in Photoshop, rendered with Sketchfab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Music Collection -->
+        <div class="portfolio-category" id="music">
+            <h3>Music</h3>
+            <div class="portfolio-grid">
+                <div class="project-card">
+                    <img src="path/to/music1-thumbnail.jpg" alt="Music 1">
+                    <div class="project-info">
+                        <h3>Music Title 1</h3>
+                        <p>Short description of the music project.</p>
+                    </div>
+                </div>
+                <!-- Add more music projects here -->
+            </div>
+        </div>
     </section>
-    <section id="about">
-        <!-- About content will go here -->
+
+    <!-- About Section -->
+    <section id="about" class="transparent-box">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>Hi! My name is Mo and I love making games. I'm currently studying the IGP course at Digital Arts and Entertainment in Kortijk Belgium.</p>
+            <button id="read-more">Read More</button>
+            <div id="expanded-about" class="hidden">
+                <p>Detailed bio and experience.</p>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Skill 1</li>
+                        <li>Skill 2</li>
+                        <!-- Add more skills as needed -->
+                    </ul>
+                </div>
+                <a href="resume.pdf" download>Download Resume</a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mo-ryckman/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/MoRyckman" target="_blank">Github</a>
+                    <!-- Add more social links as needed -->
+                </div>
+            </div>
+        </div>
     </section>
-    <footer>
-        <!-- Footer content -->
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <p>&copy; 2024 Mo Ryckman. All rights reserved.</p>
     </footer>
+
     <script src="js/scripts.js"></script>
 </body>
 </html>
