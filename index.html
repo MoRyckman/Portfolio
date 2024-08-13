@@ -11,7 +11,7 @@
     <header id="header">
         <div class="header-content">
             <h1>The Portfolio of Mo Ryckman</h1>
-            <p>Indie Developer</p>
+            <p>Unity generalist with a passion for music</p>
             <nav>
                 <ul>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -31,7 +31,7 @@
             <div class="portfolio-grid">
                 <!-- WIP Cave game -->
                 <div class="project-card">
-                    <img src="path/to/game1-thumbnail.jpg" alt="Game 1">
+                    <img src="./images/game1-thumbnail.jpg" alt="Game 1">
                     <div class="project-info">
                         <h3>Game Title 1</h3>
                         <p>WIP Cave game</p>
@@ -149,6 +149,19 @@
     <footer id="footer">
         <p>&copy; 2024 Mo Ryckman. All rights reserved.</p>
     </footer>
+
+    <!-- Modal Structure -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <!-- Keeping the class name project-card -->
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="Project Image">
+            <div id="modal-info">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/scripts.js"></script>
 </body>
