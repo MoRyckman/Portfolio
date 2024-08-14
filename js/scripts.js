@@ -11,11 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var closeBtn = document.getElementsByClassName("close-modal")[0];
 
     // Function to open the modal with the provided content
-    function openModal(imageSrc, title, description) {
+    function openModal(imageSrc, title, description, imageDes) {
         // Set the content of the modal
         document.getElementById("modal-image").src = imageSrc;
         document.getElementById("modal-title").innerText = title;
         document.getElementById("modal-description").innerText = description;
+        document.getElementById("modal-desImage").src = imageDes;
 
         // Display the modal and add the 'show' class to trigger the animation
         modal.style.display = "block";
@@ -42,7 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
             var imageSrc = this.querySelector("img").src;
             var title = this.querySelector(".project-info h3").innerText;
             var description = this.querySelector(".project-info p").innerText;
-            openModal(imageSrc, title, description);
+            var imageDes = this.querySelector(".project-info img").src;
+            openModal(imageSrc, title, description, imageDes);
         });
     }
 

@@ -10,7 +10,7 @@ html, body {
     background: url('./images/PortfolioBannerV2.png') no-repeat center center;
     background-size: 100vw;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
 }
 
 /* Smooth Scrolling */
@@ -200,8 +200,17 @@ nav ul li a:hover {
 }
 
 #modal-info p {
-    font-size: 1.2em;
-    color: #555;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#modal-desImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 /* About Section */
