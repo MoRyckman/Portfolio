@@ -115,3 +115,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', parallaxEffect);
 });
+
+
+// Function to add dynamic tilt effect
+function addTiltEffect(element) {
+    element.addEventListener('mousemove', (e) => {
+        const { width, height, left, top } = element.getBoundingClientRect();
+        const x = e.clientX - left; // X position of mouse within element
+        const y = e.clientY - top;  // Y position of mouse within element
+        const rotateX = ((y / height) - 0.5) * 30; // Adjust tilt range (15 degrees max)
+        const rotateY = ((x / width) - 0.5) * -30;
+
+        element.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`; // Add scale and tilt
+    });
+
+    element.addEventListener('mouseleave', () => {
+        element.style.transform = `rotateX(0) rotateY(0) scale(1)`; // Reset on mouse leave
+        element.style.transition = "transform 0.3s ease"; // Smooth transition back to normal
+    });
+}
+
+// Apply to all images, text, and project cards
+document.querySelectorAll('img, p, h1, h2, h3').forEach(element => {
+    addTiltEffect(element);
+});

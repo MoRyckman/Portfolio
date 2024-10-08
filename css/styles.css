@@ -18,6 +18,20 @@ html {
     scroll-behavior: smooth;
 }
 
+/* General hover effect for images and text */
+img, p, h1, h2, h3 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
+}
+
+    /* Hover effect - scale up and tilt */
+    img:hover, p:hover, h1:hover, h2:hover, h3:hover {
+        transform: scale(1.05) rotate3d(1, 1, 0, 10deg); /* Slight scale and 3D tilt */
+    }
+    /* Optional: Add a shadow for depth */
+    img:hover {
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
 /* Transparent box styling */
 .transparent-box {
     background: rgb(235, 218, 218, 0.8); /* White background with 50% opacity */
@@ -304,6 +318,69 @@ nav ul li a:hover {
 .social-links a:hover {
     color: #feb47b;
 }
+
+/* Project page */
+.project-header {
+    text-align: center;
+    padding: 40px;
+}
+
+.cover-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.project-page-body {
+    min-height: 1000%;
+    background: rgb(50, 40, 40);
+    background-attachment: scroll; /* Keeps the gradient fixed during scroll */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-transparent-box {
+    background: rgb(235, 218, 218, 0.8); /* White background with 50% opacity */
+    padding: 50px; /* Adjust padding as needed */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+    max-width: 1600px; /* Maximum width of the box */
+    margin: 0 auto; /* Center the box horizontally */
+    width: fit-content; /* Width based on content */
+}
+
+/* Project Description Section */
+.project-description {
+    padding: 50px 10%;
+}
+
+.content-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+}
+
+    .content-block .text {
+        width: 45%;
+    }
+
+    .content-block .image {
+        width: 45%;
+    }
+
+    .content-block img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Reverse the order for alternating text and image blocks */
+    .content-block.reverse {
+        flex-direction: row-reverse;
+    }
 
 /* Footer Section */
 footer {
