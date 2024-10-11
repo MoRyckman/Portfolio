@@ -136,6 +136,6 @@ function addTiltEffect(element) {
 }
 
 // Apply to all images, text, and project cards
-document.querySelectorAll('img, p, h1, h2, h3').forEach(element => {
+document.querySelectorAll('img, h1').forEach(element => {
     addTiltEffect(element);
 });
