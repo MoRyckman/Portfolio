@@ -248,7 +248,7 @@ nav ul li a:hover {
 }
 
 #read-more {
-    background-color: #ff7e5f;
+    background-color: #ead6d149;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -282,19 +282,85 @@ nav ul li a:hover {
     font-size: 1.1em;
 }
 
-#expanded-about a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff7e5f;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
+    #expanded-about a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #ead6d149;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
 
 #expanded-about a:hover {
     background-color: #feb47b;
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px 10%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+}
+
+    #skills h2 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    gap: 20px; /* Space between each skill item */
+}
+
+.skill-item {
+    background-color: #c5a0a0ff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+    .skill-item:hover {
+        transform: translateY(-5px); /* Slight lift on hover */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Image above text in skill cards */
+    .skill-item img {
+        max-width: 50px; /* Set the size of the icons */
+        margin-bottom: 10px; /* Space between the icon and text */
+        transition: transform 0.3s ease;
+    }
+
+    .skill-item p {
+        margin-top: 0;
+        font-size: 1.2em;
+    }
+
+    /* Hover animation for image */
+    .skill-item:hover img {
+        transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Switch to 1 column on mobile devices */
+    }
 }
 
 /* About Section - Hidden Content */
