@@ -437,6 +437,14 @@ nav ul li a:hover {
         width: 65%;
     }
 
+    .content-block .textFull {
+        width: 100%;
+    }
+
+    .content-block .imageFull {
+        width: 100%;
+    }
+
     .content-block img {
         width: 100%;
         height: auto;
