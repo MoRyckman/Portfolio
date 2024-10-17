@@ -328,6 +328,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+
     .skill-item:hover {
         transform: translateY(-5px); /* Slight lift on hover */
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -347,6 +348,47 @@ nav ul li a:hover {
 
     /* Hover animation for image */
     .skill-item:hover img {
+        transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+
+/* Links Grid */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns of equal width */
+    gap: 20px; /* Space between each skill item */
+}
+
+.links-item {
+    background-color: #aea9b4ff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+    .links-item:hover {
+        transform: translateY(-5px); /* Slight lift on hover */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Image above text in skill cards */
+    .links-item img {
+        max-width: 50px; /* Set the size of the icons */
+        margin-bottom: 10px; /* Space between the icon and text */
+        transition: transform 0.3s ease;
+    }
+
+    .links-item p {
+        margin-top: 0;
+        font-size: 1.2em;
+    }
+
+    /* Hover animation for image */
+    .links-item:hover img {
         transform: scale(1.1); /* Slight zoom effect on hover */
     }
 
